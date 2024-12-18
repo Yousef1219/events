@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Events</title>
+    <link rel="stylesheet" href="style_old.css">
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="header">
+            <h1>Old Events</h1>
+            <p>Click on an event to see details</p>
+        </div>
+
+        <div class="grid">
+
+            <!-- Start Cards -->
+            <div class="card" onclick="openDetailsPage('Event 1')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="\المعرض الاول\1734012520114.jpg" alt="Event 1">
+                    </div>
+                    <div class="card-back">
+                        <p>
+                        <h4>
+                        First Information Technology Exhibition at the University
+                        </h4>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" onclick="openDetailsPage('Event 2')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="/المعرض الثاني/FB_IMG_1734448939940.jpg" alt="Event 2">
+                    </div>
+                    <div class="card-back">
+                        <p>
+                            <h4>
+                            Borg El Arab Technical University Hosts the 2nd Information Technology Exhibition
+                            </h4>
+                            </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" onclick="openDetailsPage('Event 3')">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="\السيد الرئيس عبد الفتاح السيسي\354047443_807274660755370_507686912204374404_n.jpg" alt="Event 6">
+                    </div>
+                    <div class="card-back">
+                        <p>
+                            <h4>
+                            President Abdel Fattah El-Sisi visited Borg El Arab Technological University
+                            </h4>
+                            </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Details Page -->
+    <div class="details-container" id="detailsPage" style="display: none;">
+        <div class="text-container">
+            <br><br> 
+            <p id="event-title"></p>
+            <p id="event-description"></p>
+        </div>
+
+        <!-- Modal for Image -->
+<div id="image-modal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center;">
+    <!-- السهم الأيسر -->
+    <button id="prev-btn" onclick="changeImage(-1)" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: white; border: none; border-radius: 50%; padding: 15px; cursor: pointer;">&#8250;</button>
+  
+    <!-- الصورة المعروضة في الـ Modal -->
+    <img id="modal-image" src="" alt="Modal Image" style="max-width: 90%; max-height: 90%; border-radius: 10px;">
+  
+    <video id="modal-video" controls style="display: none; width: 100%; border-radius: 10px;"></video>
+
+    <!-- السهم الأيمن -->
+    <button id="next-btn" onclick="changeImage(1)" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); background: white; border: none; border-radius: 50%; padding: 15px; cursor: pointer;">&#8249;</button>
+  
+    <!-- زر الإغلاق -->
+    <button id="close-modal" onclick="closeModal()"style="position: absolute; top: 50px; right: 20px; background: red; color: white; border: none; border-radius: 5px; padding: 10px; cursor: pointer;">X</button>
+  </div>
+        
+
+          <!-- Navbar -->
+    <div class="navbar">
+        <button  onclick="goBack()"  class="back-button">Go Back</button>
+    </div>
+    </div>
+
+    <script src="script_old.js"></script>
+
+</body>
+</html>
